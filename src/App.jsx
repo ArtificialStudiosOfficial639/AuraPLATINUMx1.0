@@ -26,7 +26,7 @@ function AppLayout() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/AuraPLATINUMx1.0">
       <AcademicProvider>
         <TaskProvider>
           <Routes>
