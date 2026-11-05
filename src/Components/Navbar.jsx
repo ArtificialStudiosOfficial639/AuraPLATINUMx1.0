@@ -28,7 +28,7 @@ const ROUTE_CONFIG = {
  * Fallback metadata for unmatched or 404 paths
  */
 const DEFAULT_ROUTE_META = {
-  title: 'AURA',
+  title: 'AURA PLATINUM',
   subtitle: 'Personal academic performance tracker and AI study assistant.',
 };
 

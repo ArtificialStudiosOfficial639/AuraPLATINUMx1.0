@@ -1,0 +1,434 @@
+
+.about-ayu-page {
+  padding: 30px;
+  color: var(--text-main);
+  max-width: 1250px;
+  margin: auto;
+  animation: ayuFadeIn 0.5s ease;
+}
+
+@keyframes ayuFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero */
+
+.ayu-hero {
+  min-height: 340px;
+  padding: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 85% 50%, rgba(14, 116, 144, 0.25), transparent 35%),
+    linear-gradient(135deg, #111c2d, #0b1220);
+}
+
+.ayu-hero-content {
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+.ayu-eyebrow,
+.ayu-section-heading > span,
+.ayu-vision > span {
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.ayu-hero h1 {
+  font-size: clamp(42px, 7vw, 76px);
+  letter-spacing: -3px;
+  margin: 18px 0;
+}
+
+.ayu-hero h1 span {
+  color: #38bdf8;
+}
+
+.ayu-tagline {
+  color: #e2e8f0;
+  font-size: 19px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.ayu-intro {
+  color: #94a3b8;
+  line-height: 1.8;
+  font-size: 14px;
+  max-width: 520px;
+}
+
+.ayu-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 24px;
+}
+
+.ayu-hero-tags span {
+  color: #7dd3fc;
+  background: rgba(56, 189, 248, 0.09);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 8px 12px;
+  border-radius: 30px;
+  font-size: 11px;
+}
+
+/* Orbit illustration */
+
+.ayu-orbit {
+  width: 210px;
+  height: 210px;
+  flex-shrink: 0;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.ayu-orbit-ring {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border: 1px dashed rgba(56, 189, 248, 0.5);
+  border-radius: 50%;
+  animation: orbitSpin 25s linear infinite;
+}
+
+@keyframes orbitSpin {
+  to { transform: rotate(360deg); }
+}
+
+.ayu-orbit-core {
+  width: 90px;
+  height: 90px;
+  border-radius: 26px;
+  display: grid;
+  place-items: center;
+  font-size: 46px;
+  font-weight: 900;
+  color: white;
+  background: linear-gradient(135deg, #0284c7, #6366f1);
+  box-shadow: 0 0 45px rgba(56, 189, 248, 0.3);
+}
+
+.orbit-label {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 800;
+  color: #bae6fd;
+  background: #172638;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  padding: 7px 10px;
+}
+
+.orbit-one { top: 0; left: 75px; }
+.orbit-two { right: -5px; top: 90px; }
+.orbit-three { bottom: 0; left: 80px; }
+.orbit-four { left: -15px; top: 90px; }
+
+/* Sections */
+
+.ayu-section {
+  margin-top: 55px;
+}
+
+.ayu-section-heading {
+  margin-bottom: 24px;
+}
+
+.ayu-section-heading h2,
+.ayu-vision h2 {
+  font-size: clamp(24px, 4vw, 34px);
+  margin: 10px 0;
+  letter-spacing: -1px;
+}
+
+.ayu-section-heading p {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.ayu-about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ayu-info-card,
+.ayu-hardship-card {
+  padding: 23px;
+  border-radius: 15px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: 0.25s ease;
+}
+
+.ayu-info-card:hover,
+.ayu-hardship-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.ayu-card-icon {
+  font-size: 25px;
+}
+
+.ayu-info-card h3,
+.ayu-hardship-card h3 {
+  font-size: 16px;
+  margin: 15px 0 9px;
+}
+
+.ayu-info-card p,
+.ayu-hardship-card p {
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* Timeline */
+
+.ayu-timeline {
+  position: relative;
+  border-left: 2px solid rgba(56, 189, 248, 0.25);
+  margin-left: 16px;
+  padding-left: 24px;
+}
+
+.ayu-timeline-item {
+  position: relative;
+  margin-bottom: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.ayu-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -32px;
+  top: 22px;
+  width: 12px;
+  height: 12px;
+  background: #38bdf8;
+  border: 3px solid #0a0d14;
+  border-radius: 50%;
+}
+
+.ayu-timeline-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  border: none;
+  background: transparent;
+  color: var(--text-main);
+  text-align: left;
+  cursor: pointer;
+}
+
+.ayu-day-number {
+  color: #38bdf8;
+  font-size: 10px;
+  font-weight: 800;
+  min-width: 50px;
+}
+
+.ayu-day-icon {
+  font-size: 20px;
+}
+
+.ayu-day-title {
+  font-size: 14px;
+  font-weight: 700;
+  flex: 1;
+}
+
+.ayu-expand-icon {
+  font-size: 22px;
+  color: #38bdf8;
+}
+
+.ayu-timeline-details {
+  padding: 0 20px 20px 83px;
+  animation: ayuFadeIn 0.25s ease;
+}
+
+.ayu-timeline-details > p {
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.ayu-detail-row {
+  margin-top: 16px;
+}
+
+.ayu-detail-row span {
+  color: #38bdf8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.ayu-detail-row p {
+  color: #cbd5e1;
+  font-size: 13px;
+  margin: 6px 0 0;
+}
+
+/* Hardships */
+
+.ayu-hardship-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.ayu-hardship-card > span {
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Quote */
+
+.ayu-quote {
+  margin-top: 24px;
+  padding: 28px;
+  background: rgba(56, 189, 248, 0.06);
+  border-left: 3px solid #38bdf8;
+  border-radius: 12px;
+}
+
+.ayu-quote > span {
+  color: #38bdf8;
+  font-size: 42px;
+  line-height: 1;
+}
+
+.ayu-quote p {
+  color: #e2e8f0;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.ayu-quote small {
+  color: #38bdf8;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+/* Vision */
+
+.ayu-vision {
+  margin-top: 55px;
+  padding: 40px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  background: linear-gradient(135deg, #101c2d, #111827);
+}
+
+.ayu-vision h2 {
+  color: #f1f5f9;
+}
+
+.ayu-vision > p {
+  max-width: 650px;
+  margin: 15px auto 25px;
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.ayu-vision-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: #38bdf8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.ayu-footer {
+  text-align: center;
+  padding: 35px 0 10px;
+  color: #64748b;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.ayu-footer span {
+  color: #38bdf8;
+  margin: 0 6px;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+  .ayu-hero {
+    padding: 30px;
+  }
+
+  .ayu-orbit {
+    transform: scale(0.8);
+    margin: -20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .about-ayu-page {
+    padding: 16px;
+  }
+
+  .ayu-hero {
+    padding: 25px;
+  }
+
+  .ayu-orbit {
+    display: none;
+  }
+
+  .ayu-about-grid,
+  .ayu-hardship-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ayu-timeline {
+    padding-left: 15px;
+  }
+
+  .ayu-timeline-details {
+    padding-left: 18px;
+  }
+
+  .ayu-day-number {
+    min-width: 42px;
+  }
+
+  .ayu-timeline-button {
+    gap: 10px;
+    padding: 15px 10px;
+  }
+
+  .ayu-vision {
+    padding: 28px 18px;
+  }
+}

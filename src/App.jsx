@@ -9,6 +9,7 @@ import Assistant from './pages/Assistant';
 import NotFound from './pages/NotFound';
 import { AcademicProvider } from './context/AcademicContext';
 import { TaskProvider } from './context/TaskContext';
+import AboutAyu from './pages/AboutAyu';
 import './styles/global.css';
 
 function AppLayout() {
@@ -34,6 +35,7 @@ function App() {
               <Route path="subjects" element={<Subjects />} />
               <Route path="tasks" element={<Tasks />} />
               <Route path="assistant" element={<Assistant />} />
+              <Route path="about" element={<AboutAyu />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

@@ -7,16 +7,17 @@ import { NavLink } from 'react-router-dom';
  */
 function Sidebar() {
   const navItems = [
-    { id: 'dash', path: '/', label: 'Dashboard', icon: '📊', end: true },
-    { id: 'subjects', path: '/subjects', label: 'Subjects', icon: '📚' },
-    { id: 'tasks', path: '/tasks', label: 'Tasks', icon: '✅' },
-    { id: 'assistant', path: '/assistant', label: 'AI Assistant', icon: '🤖' },
-  ];
+  { id: 'dash', path: '/', label: 'Dashboard', icon: '📊', end: true },
+  { id: 'subjects', path: '/subjects', label: 'Subjects', icon: '📚' },
+  { id: 'tasks', path: '/tasks', label: 'Tasks', icon: '✅' },
+  { id: 'assistant', path: '/assistant', label: 'AI ', icon: '🤖' },
+  { id: 'about', path: '/about', label: 'ABOUT AYU', icon: '👨‍💻' },
+];
 
   return (
     <aside className="sidebar">
       <div className="sidebar-brand">
-        <h2>AURA</h2>
+        <h2>AURA PLATINUM</h2>
         <span className="brand-badge">Student OS</span>
       </div>
 
