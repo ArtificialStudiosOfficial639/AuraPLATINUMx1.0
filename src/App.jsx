@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
-import Navbar from './components/Navbar';
-import Dashboard from './pages/Dashboard';
-import Subjects from './pages/Subjects';
-import Tasks from './pages/Tasks';
-import Assistant from './pages/Assistant';
-import NotFound from './pages/NotFound';
-import { AcademicProvider } from './context/AcademicContext';
-import { TaskProvider } from './context/TaskContext';
-import AboutAyu from './pages/AboutAyu';
+import Sidebar from './components/Sidebar.jsx';
+import Navbar from './components/Navbar.jsx';
+import Dashboard from './pages/Dashboard.jsx';
+import Subjects from './pages/Subjects.jsx';
+import Tasks from './pages/Tasks.jsx';
+import Assistant from './pages/Assistant.jsx';
+import NotFound from './pages/NotFound.jsx';
+import { AcademicProvider } from './context/AcademicContext.jsx';
+import { TaskProvider } from './context/TaskContext.jsx';
+import AboutAyu from './pages/AboutAyu.jsx';
 import './styles/global.css';
 
 function AppLayout() {

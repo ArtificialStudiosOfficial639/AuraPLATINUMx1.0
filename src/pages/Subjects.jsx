@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import SubjectCard from '../components/SubjectCard';
-import AddSubjectModal from '../components/AddSubjectModal';
-import { useAcademic } from '../context/AcademicContext';
+import SubjectCard from '../components/SubjectCard.jsx';
+import AddSubjectModal from '../components/AddSubjectModal.jsx';
+import { useAcademic } from '../context/AcademicContext.jsx';
 
 function Subjects() {
   const { subjects, stats, addSubject, deleteSubject, resetSubjects } = useAcademic();

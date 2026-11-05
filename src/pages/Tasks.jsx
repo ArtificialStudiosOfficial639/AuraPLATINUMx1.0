@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import TaskItem from '../components/TaskItem';
-import AddTaskModal from '../components/AddTaskModal';
-import { useTasks } from '../context/TaskContext';
+import TaskItem from '../components/TaskItem.jsx';
+import AddTaskModal from '../components/AddTaskModal.jsx';
+import { useTasks } from '../context/TaskContext.jsx';
 
 function Tasks() {
   const {
