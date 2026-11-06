@@ -12,6 +12,7 @@ function Sidebar() {
   { id: 'tasks', path: '/tasks', label: 'Tasks', icon: '✅' },
   { id: 'assistant', path: '/assistant', label: 'AI ', icon: '🤖' },
   { id: 'about', path: '/about', label: 'ABOUT AYU', icon: '👨‍💻' },
+  { id: 'about', path: '/community', label: 'Join the community', icon: '👨' },
 ];
 
   return (

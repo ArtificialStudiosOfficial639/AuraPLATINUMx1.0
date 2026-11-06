@@ -1,10 +1,8 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
 
-/**
- * Route metadata dictionary
- * Defines the heading and contextual subtitle for each route path.
- */
+import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext.jsx';
+
 const ROUTE_CONFIG = {
   '/': {
     title: 'Dashboard',
@@ -22,25 +20,45 @@ const ROUTE_CONFIG = {
     title: 'AI Study Assistant',
     subtitle: 'Ask questions, review concepts, and get instant study guidance.',
   },
+  '/community': {
+    title: 'Global Community',
+    subtitle: 'Connect, collaborate and learn together.',
+  },
+  '/about': {
+    title: 'About AURA',
+    subtitle: 'Your personal academic universe.',
+  },
 };
 
-/**
- * Fallback metadata for unmatched or 404 paths
- */
 const DEFAULT_ROUTE_META = {
   title: 'AURA PLATINUM',
   subtitle: 'Personal academic performance tracker and AI study assistant.',
 };
 
-/**
- * Dynamic Navbar
- * Reads current location.pathname and updates the page title and subtitle.
- */
 function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
 
-  // Retrieve matching config or fallback to default
-  const currentMeta = ROUTE_CONFIG[location.pathname] || DEFAULT_ROUTE_META;
+  const { user, logout } = useAuth();
+
+  const [loggingOut, setLoggingOut] = React.useState(false);
+
+  const currentMeta =
+    ROUTE_CONFIG[location.pathname] || DEFAULT_ROUTE_META;
+
+  const username = user?.displayName || 'Student';
+
+  const handleLogout = async () => {
+    try {
+      setLoggingOut(true);
+      await logout();
+      navigate('/login', { replace: true });
+    } catch (error) {
+      console.error('Logout failed:', error);
+      alert('Logout failed. Please try again.');
+      setLoggingOut(false);
+    }
+  };
 
   return (
     <header className="navbar">
@@ -52,8 +70,16 @@ function Navbar() {
       <div className="navbar-actions">
         <div className="profile-pill">
           <span className="status-indicator" />
-          <span className="user-handle">Ayu</span>
+          <span className="user-handle">{username}</span>
         </div>
+
+        <button
+          className="logout-btn"
+          onClick={handleLogout}
+          disabled={loggingOut}
+        >
+          {loggingOut ? 'Logging out...' : 'Logout'}
+        </button>
       </div>
     </header>
   );
