@@ -3,13 +3,16 @@ import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  apiKey: "AIzaSyAPJ4zNDd6RQNzgGdU2la5z2srygjBIEHU",
+  authDomain: "auraplatinum-83f42.firebaseapp.com",
+
+  databaseURL: "https://auraplatinum-83f42-default-rtdb.firebaseio.com",
+
+  projectId: "auraplatinum-83f42",
+  storageBucket: "auraplatinum-83f42.firebasestorage.app",
+  messagingSenderId: "632708091551",
+  appId: "1:632708091551:web:6a608657d28963f0465caa",
+  measurementId: "G-2PCWY38JE1"
 };
 
 const app = initializeApp(firebaseConfig);
